@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+  <head>
+    <title>Scrap Management</title>
+  </head>
+
+  <body>
+    <h1>{{ boldmessage }}</h1>
+    <img src="{% static "images/s.jpg" %}"
+                alt="Picture of Smartlink" />
+
+    <div>
+      <a href="/scr/add/">Add Scrap Details</a>
+    </div>
+    <br>
+    <div>
+      <a href="/admin/"><h3>Scrap Committee Login</h3></a>
+    </div>
+  </body>
+
+</html>
