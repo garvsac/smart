@@ -2,18 +2,18 @@ from scr.models import Category
 from django import forms
 
 Department = (
-    ('rma','RMA'),
-    ('production', 'PRODUCTION'),
-    ('warehouse', 'WAREHOUSE'),
-    ('maintenance', 'MAINTENANCE'),
+    ('rma','R.M.A.'),
+    ('production', 'Production'),
+    ('warehouse', 'Warehouse'),
+    ('maintenance', 'Maintenance'),
 )
 
 Type = (
-    ('hazardous', 'HAZARDOUS'),
-    ('e-waster', 'E-WASTE'),
-    ('metals', 'METALS'),
-    ('paper', 'PAPER'),
-    ('plastic', 'PLASTIC'),
+    ('hazardous', 'Hazardous'),
+    ('e-waste', 'e-Waste'),
+    ('metals', 'Metals'),
+    ('paper', 'Paper'),
+    ('plastic', 'Plastic'),
 )
 
 class MyModelForm(forms.ModelForm):
