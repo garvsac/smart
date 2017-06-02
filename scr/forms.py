@@ -1,4 +1,4 @@
-from scr.models import Category
+from scr.models import Category, quote
 from django import forms
 
 Department = (
@@ -26,3 +26,15 @@ class MyModelForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ['department', 'waste_type', 'description']
+		
+class Quotation(forms.ModelForm):
+    name = forms.CharField(max_length=100,required=True,help_text="Name")
+    contact_info = forms.CharField(max_length=100,required=True,help_text="Contact Information")
+    item = forms.CharField(max_length=100,required=True,help_text="Item")
+    quantity = forms.CharField(max_length=100,required=True,help_text="Quantity")
+    price = forms.CharField(max_length=100,required=True,help_text="Price quoted")
+    additional_info = forms.CharField(max_length=1000,help_text="Additional Information")
+	
+    class Meta:
+        model = quote
+        fields = ['name', 'contact_info', 'item', 'quantity', 'price', 'additional_info']
