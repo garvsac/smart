@@ -9,38 +9,45 @@
     <style type="text/css">
 
 fieldset{
-	border: none;
+  border: none;
 }
 
 label {
-	display: block;
-	margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
 }
-input[type="text"],
+
 textarea,
 select {
 
-	width: 100%;
+  width: 100%;
 
 
 }
-
-.k{
-width: 100%;
+input[type="text"]{
+  width: 96%;
+  padding: auto;
+  margin: auto;
 }
+
+submit-row{
+  margin-left: -100px;
+}
+
+
 .number {
-	background: #417690;
-	color: #fff;
-	height: 15px;
-	width: 15px;
-	display: inline-block;
-	font-size: 0.8em;
-	margin-right: 4px;
-	line-height: 30px;
-	text-align: center;
+  background: #417690;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
 
 
-	border-radius: 50px 50px 50px 0px;
+  border-radius: 50px 50px 50px 0px;
 }
 
 
@@ -52,7 +59,7 @@ width: 100%;
   <body class=" login" data-admin-utc-offset="0">
     
       <div id="container">
-		    <!-- Header -->
+        <!-- Header -->
         <div id="header">
         <div id="branding">
 
@@ -73,27 +80,30 @@ width: 100%;
             {{ hidden }}
         {% endfor %}
         
-		{% for field in form.visible_fields %}
+    {% for field in form.visible_fields %}
 
         <br>
 
               {{ field.errors }}
           <div class="form-row">
-			  <label>
+        <label>
               <span class="number"></span>
 
               {{ field.help_text }}
               </label>
 
-              <div class="k">{{ field }}</div>
+              <div>{{ field }}</div>
 
           </div>
 
         {% endfor %}
           <div class="submit-row">
-        <input type="submit" name="submit" value="Add" />
+                                    
+          <input type="submit" name="submit" value="Add" />  
+                         
+          <input type="reset" name="reset" value="Reset" />
+          
           </div>
-              </div>
         <div id="footer"></div>
       </form>
     </div>
